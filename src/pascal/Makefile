@@ -1,0 +1,2 @@
+default:
+	fpc hello.p
