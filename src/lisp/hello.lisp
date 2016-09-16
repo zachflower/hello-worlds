@@ -1,1 +1,2 @@
-(format t "Hello, world~%")
+(defun main()
+  (format t "Hello, world~%"))

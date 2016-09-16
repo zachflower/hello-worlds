@@ -1,0 +1,2 @@
+default:
+	swift hello.swift

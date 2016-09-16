@@ -1,1 +1,5 @@
-writeLines("Hello, world\n")
+helloWorld <- function(){
+   writeLines("Hello, world\n")
+}
+
+helloWorld()

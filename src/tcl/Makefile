@@ -1,0 +1,2 @@
+default:
+	tclsh hello.tcl

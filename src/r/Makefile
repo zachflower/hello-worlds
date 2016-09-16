@@ -1,0 +1,2 @@
+default:
+	Rscript hello.r

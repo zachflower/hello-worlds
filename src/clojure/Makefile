@@ -1,0 +1,2 @@
+default:
+	lein run
