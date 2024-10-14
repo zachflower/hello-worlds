@@ -1,21 +1,10 @@
-# html
+# HTML
 
-An implementation of `hello, world` in html programming language.
-
-## Dependencies
-
-- make
-- gcc
-
-## Compilation
-
-```sh
-make hello
-```
+An implementation of `hello, world` in HTML programming language.
 
 ## Usage
 
 ```sh
-./hello
+HTML5 helloAll.html
 ```
 
