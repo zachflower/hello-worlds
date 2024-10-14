@@ -35,3 +35,36 @@ are trying to adhere pretty strictly to with each implementation:
   packages. Try to use standard libraries whenever possible.
 - All submissions should have an appropriate `Makefile` to build the source
   (where applicable)
+
+#### README Files
+
+All submissions should have a README file that uses the following format:
+
+```markdown
+# Language-Name
+
+An implementation of `hello, world` in the `Language-Name` programming language.
+
+## Dependencies
+
+- List of dependencies, if any
+
+## Compilation
+
+```sh
+# Compilation instructions using the `make` command or other build tools (where applicable)
+```
+
+## Usage
+
+```sh
+# Usage instructions
+```
+
+## Contributing
+
+To contribute to this project, please see the [CONTRIBUTING.md](CONTRIBUTING.md) file.
+
+## License
+
+This project is licensed under the MIT License. For more information, please see the [LICENSE](LICENSE) file.
