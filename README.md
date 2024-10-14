@@ -1,6 +1,6 @@
 # Hello Worlds
  
-Creating hellow world in a different programming language... everyday... for all of eternity.
+Creating hello world in a different programming language... everyday... for all of eternity.
 
 ## Resources
 
