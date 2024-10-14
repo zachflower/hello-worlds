@@ -35,8 +35,3 @@ are trying to adhere pretty strictly to with each implementation:
   packages. Try to use standard libraries whenever possible.
 - All submissions should have an appropriate `Makefile` to build the source
   (where applicable)
-
-### README
-
-Every language should have a README file explaining (or at least pointing to
-a resource explaining) how to install, compile, and run the source.
