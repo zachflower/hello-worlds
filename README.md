@@ -51,14 +51,15 @@ An implementation of `hello, world` in the `Language-Name` programming language.
 
 ## Compilation
 
-```sh
+\`\`\`sh
 # Compilation instructions using the `make` command or other build tools (where applicable)
-```
+\`\`\`
 
 ## Usage
 
-```sh
+\`\`\`sh
 # Usage instructions
+\`\`\`
 ```
 
 ## Contributing
