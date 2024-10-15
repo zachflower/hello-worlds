@@ -8,7 +8,7 @@ jobs:
 
     strategy:
       matrix:
-        language: [sh, python, c, cpp]
+        language: [sh, py, c, cpp]
 
     steps:
     - name: Checkout repository
@@ -20,7 +20,7 @@ jobs:
         sudo apt install make -y
 
     - name: Set up Python
-      if: matrix.language == 'python'
+      if: matrix.language == 'py'
       uses: actions/setup-python@v2
       with:
         python-version: '3.x'
@@ -52,7 +52,7 @@ jobs:
             ;;
         esac
 
-        if [ "$output" = "hello, world\n" ]; then
+        if [ "$output" = "hello, world" ]; then
           echo "Output is correct: $output"
         else
           echo "Output is incorrect: $output"
