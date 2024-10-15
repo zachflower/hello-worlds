@@ -1,8 +1,8 @@
 # HTML
 
-An implementation of `hello, world` in HTML programming language.
+An implementation of `hello, world` in the HTML programming language.
 
 ## Usage
 
-Right-click the HTML file click "Open with" Choose your browser like firefox, Google Chrome, brave, ect.
+Right-click `hello, world`, select "Open with", and then choose your browser (i.e. Firefox, Google Chrome, Brave, ect).
 
