@@ -1,1 +1,2 @@
-javac hello.java
+default: hello.java
+	javac hello.java
