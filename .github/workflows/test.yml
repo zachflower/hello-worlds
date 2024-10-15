@@ -41,6 +41,9 @@ jobs:
           sh)
             output=$(sh hello.sh)
             ;;
+          pl)
+            output=$(pl hello.pl)
+            ;;
           py)
             output=$(python3 hello.py)
             ;;
