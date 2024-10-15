@@ -1,2 +1,2 @@
-my $message = "hello, world";
+my $message = "hello, world\n";
 print $message;

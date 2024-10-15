@@ -4,3 +4,6 @@ An implementation of `hello, world` in the Perl programming language
 
 ## Usage
 
+```
+perl hello.pl
+```

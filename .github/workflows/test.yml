@@ -8,7 +8,7 @@ jobs:
 
     strategy:
       matrix:
-        language: [sh, py, c, cpp]
+        language: [sh, py, pl, c, cpp]
 
     steps:
     - name: Checkout repository
@@ -31,6 +31,12 @@ jobs:
         sudo apt update
         sudo apt install -y build-essential
 
+    - name: Install Perl
+      if: matrix.language == 'pl'
+      run: |
+        sudo apt update
+        sudo apt install -y perl
+
     - name: Run Hello World Script
       run: |
         [ -d ${{ matrix.language }} ] || exit 0
@@ -42,7 +48,7 @@ jobs:
             output=$(sh hello.sh)
             ;;
           pl)
-            output=$(pl hello.pl)
+            output=$(perl hello.pl)
             ;;
           py)
             output=$(python3 hello.py)
