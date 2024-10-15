@@ -9,7 +9,7 @@ section .text
 _start:
 
 mov eax, 4 ; syscall SYS_WRITE
-mov ebx, 1 ; write to stdout or terminal
+mov ebx, 1 ; write to stdout aka terminal
 mov ecx, msg ; write the msg variable
 mov edx, len ; defines how many bytes to write using the len variable
 int 0x80 ; software interrupt to run our syscall
