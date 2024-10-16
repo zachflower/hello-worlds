@@ -8,7 +8,7 @@ jobs:
 
     strategy:
       matrix:
-        language: [sh, py, c, cpp]
+        language: [sh, py, c, cpp, js]
 
     steps:
     - name: Checkout repository
@@ -31,6 +31,13 @@ jobs:
         sudo apt update
         sudo apt install -y build-essential
 
+    - name: Install Node js
+      if: matrix.language == 'js'
+      run: |
+        curl -fsSL https://fnm.vercel.app/install | bash
+        source ~/.bashrc
+        fnm use --install-if-missing 20
+        
     - name: Run Hello World Script
       run: |
         [ -d ${{ matrix.language }} ] || exit 0
@@ -51,6 +58,10 @@ jobs:
           cpp)
             make
             output=$(./hello)
+            ;;
+          js)
+            make
+            output=$(node script.js)
             ;;
         esac
 
