@@ -19,6 +19,7 @@ Thank you for considering contributing to our Hello Worlds project! We appreciat
     - Command line implementations only, unless explicitly impossible due to language constraints.
     - Avoid using third-party libraries or packages unless absolutely necessary. Use standard libraries whenever possible.
     - Include an appropriate `Makefile` to build the source (where applicable).
+    - Update the `.github/workflows/test.yml` file to include your new language in the list of languages to test, making sure to add any applicable dependencies. Ensure that your implementation passes the tests.
 5. **Commit Your Changes**: Commit your changes with a meaningful commit message.
     ```sh
     git add .

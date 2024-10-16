@@ -1,3 +1,5 @@
+[![image](https://github.com/user-attachments/assets/61edb91a-3a13-4798-ab85-e7bac552b7a1)](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program)
+
 # Hello Worlds
  
 Creating hello world in a different programming language... everyday... for all of eternity.
@@ -22,21 +24,26 @@ examples, take a crack at any language, and submit a pull request.
 We are by no means experts, so if you see something that can be improved upon,
 please let us know (or submit a pull request with the changes yourself)!
 
+### Structure
+
+All new submissions should be placed in a subfolder matching the extension for the
+language (i.e. `cpp` for C++, `py` for Python, etc).
+
 ### Functionality
 
 We haven't exactly established many rules, but here are some guidelines that we
 are trying to adhere pretty strictly to with each implementation:
 
-- The script should print `hello, world` (underscore, in the style of the first
-  hello world implementation in the B programming language)
+- The script should print `hello, world` (lowercased, in the style of the above image),
+  followed by a newline.
 - Command line implementations only, unless explicitly impossible due to language
-  constraints
+  constraints (such as HTML).
 - Unless it is absolutely, 100% necessary, do not use third party libraries or
   packages. Try to use standard libraries whenever possible.
 - All submissions should have an appropriate `Makefile` to build the source
-  (where applicable)
+  (where applicable).
 
-#### README Files
+### README Files
 
 All submissions should have a README file that uses the following format:
 

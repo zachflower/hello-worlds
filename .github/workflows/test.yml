@@ -1,0 +1,62 @@
+name: Test Hello World Scripts
+
+on: [push, pull_request]
+
+jobs:
+  test-scripts:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        language: [sh, py, c, cpp]
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    
+    - name: Set up base dependencies
+      run: |
+        sudo apt update
+        sudo apt install make -y
+
+    - name: Set up Python
+      if: matrix.language == 'py'
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Install C/C++ Compiler
+      if: matrix.language == 'c' || matrix.language == 'cpp'
+      run: |
+        sudo apt update
+        sudo apt install -y build-essential
+
+    - name: Run Hello World Script
+      run: |
+        [ -d ${{ matrix.language }} ] || exit 0
+
+        pushd ${{ matrix.language }}
+
+        case ${{ matrix.language }} in
+          sh)
+            output=$(sh hello.sh)
+            ;;
+          py)
+            output=$(python3 hello.py)
+            ;;
+          c)
+            make
+            output=$(./hello)
+            ;;
+          cpp)
+            make
+            output=$(./hello)
+            ;;
+        esac
+
+        if [ "$output" = "hello, world" ]; then
+          echo "Output is correct: $output"
+        else
+          echo "Output is incorrect: $output"
+          exit 1
+        fi
