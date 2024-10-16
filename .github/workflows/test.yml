@@ -24,6 +24,11 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: '3.x'
+    
+    - name: Install Ruby
+      if: matrix.language == 'rb'
+      run: |
+        sudo apt-get install ruby-full
 
     - name: Install C/C++ Compiler
       if: matrix.language == 'c' || matrix.language == 'cpp'
