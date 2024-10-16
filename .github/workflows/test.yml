@@ -34,9 +34,12 @@ jobs:
     - name: Install Node js
       if: matrix.language == 'js'
       run: |
-        curl -fsSL https://fnm.vercel.app/install | bash
-        source ~/.bashrc
-        fnm use --install-if-missing 20
+        sudo apt update
+        sudo apt install curl
+        curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+        sudo apt install -y nodejs
+        sudo apt install npm
+        node script.js
         
     - name: Run Hello World Script
       run: |
