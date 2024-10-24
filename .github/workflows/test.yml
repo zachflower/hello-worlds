@@ -35,10 +35,7 @@ jobs:
       if: matrix.language == 'js'
       run: |
         sudo apt update
-        sudo apt install curl
-        curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
-        sudo apt install -y nodejs
-        sudo apt install npm
+        sudo apt install -y nodejs npm
 
     - name: Install Perl
       if: matrix.language == 'pl'
