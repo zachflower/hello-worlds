@@ -8,7 +8,7 @@ jobs:
 
     strategy:
       matrix:
-        language: [sh, py, c, cpp]
+        language: [sh, py, pl, c, cpp]
 
     steps:
     - name: Checkout repository
@@ -40,6 +40,12 @@ jobs:
         sudo apt install -y nodejs
         sudo apt install npm
 
+    - name: Install Perl
+      if: matrix.language == 'pl'
+      run: |
+        sudo apt update
+        sudo apt install -y perl
+
     - name: Run Hello World Script
       run: |
         [ -d ${{ matrix.language }} ] || exit 0
@@ -49,6 +55,9 @@ jobs:
         case ${{ matrix.language }} in
           sh)
             output=$(sh hello.sh)
+            ;;
+          pl)
+            output=$(perl hello.pl)
             ;;
           py)
             output=$(python3 hello.py)
