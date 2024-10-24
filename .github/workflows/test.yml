@@ -58,7 +58,8 @@ jobs:
             output=$(./hello)
             ;;
           rb) 
-            output=$(
+            output=$(ruby hello.rb)
+            ;;
         esac
 
         if [ "$output" = "hello, world" ]; then
