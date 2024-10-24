@@ -57,6 +57,8 @@ jobs:
             make
             output=$(./hello)
             ;;
+          rb) 
+            output=$(
         esac
 
         if [ "$output" = "hello, world" ]; then
