@@ -4,12 +4,13 @@ An implementation of `hello, world` in the `Brainf**k` programming language.
 
 ## Dependencies
 
+- make
 - g++
 
 ## Compilation
 
 ```sh
-g++ -o brainfk_interpreter brainfk_interpreter.cpp
+make
 ```
 
 ## Usage
