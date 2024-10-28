@@ -8,7 +8,7 @@ jobs:
 
     strategy:
       matrix:
-        language: [sh, py, pl, c, cpp, js]
+        language: [sh, py, pl, c, cpp, js, bf]
 
     steps:
     - name: Checkout repository
@@ -26,7 +26,7 @@ jobs:
         python-version: '3.x'
 
     - name: Install C/C++ Compiler
-      if: matrix.language == 'c' || matrix.language == 'cpp'
+      if: matrix.language == 'c' || matrix.language == 'cpp' || matrix.language == 'bf'
       run: |
         sudo apt update
         sudo apt install -y build-essential
@@ -69,6 +69,10 @@ jobs:
             ;;
           js)
             output=$(node script.js)
+            ;;
+          bf)
+            make
+            output=$(./brainfk_interpreter hello_world.bf)
             ;;
         esac
 
