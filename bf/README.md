@@ -1,4 +1,4 @@
-# Language-Name
+# Brainf**k
 
 An implementation of `hello, world` in the `Brainf**k` programming language.
 
