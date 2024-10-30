@@ -8,7 +8,7 @@ jobs:
 
     strategy:
       matrix:
-        language: [sh, py, pl, c, cpp, js]
+        language: [sh, py, pl, c, cpp, js, zig]
 
     steps:
     - name: Checkout repository
@@ -42,6 +42,12 @@ jobs:
       run: |
         sudo apt update
         sudo apt install -y perl
+    
+    - name: Install zig
+      if: matrix.language == 'zig'
+      uses: mlugg/setup-zig@v1
+      with:
+        mirror: 'https://pkg.machengine.org/zig'
 
     - name: Run Hello World Script
       run: |
@@ -69,6 +75,9 @@ jobs:
             ;;
           js)
             output=$(node script.js)
+            ;;
+          zig)
+            output=$(zig run hello.zig)
             ;;
         esac
 
