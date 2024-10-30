@@ -45,12 +45,9 @@ jobs:
     
     - name: Install Zig
       if: matrix.language == 'zig'
-      run: |
-        sudo apt update
-        sudo apt install -y curl
-        curl -L https://ziglang.org/download/index.json | jq -r '.[0].url' | xargs curl -L -o zig.tar.xz
-        tar -xf zig.tar.xz
-        sudo mv zig-* /usr/local/zig
+      uses: mlugg/setup-zig@v1
+      with:
+        mirror: 'https://pkg.machengine.org/zig'
 
     - name: Run Hello World Script
       run: |
