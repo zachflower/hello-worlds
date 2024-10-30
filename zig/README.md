@@ -7,4 +7,3 @@ An implementation of `hello, world` in the `Zig` programming language.
 ```sh
 zig run hello.zig
 ```
-

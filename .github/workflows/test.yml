@@ -8,7 +8,7 @@ jobs:
 
     strategy:
       matrix:
-        language: [sh, py, pl, c, cpp, js]
+        language: [sh, py, pl, c, cpp, js, zig]
 
     steps:
     - name: Checkout repository
@@ -42,6 +42,15 @@ jobs:
       run: |
         sudo apt update
         sudo apt install -y perl
+    
+    - name: Install Zig
+      if: matrix.language == 'zig'
+      run: |
+        sudo apt update
+        sudo apt install -y curl
+        curl -L https://ziglang.org/download/index.json | jq -r '.[0].url' | xargs curl -L -o zig.tar.xz
+        tar -xf zig.tar.xz
+        sudo mv zig-* /usr/local/zig
 
     - name: Run Hello World Script
       run: |
@@ -69,6 +78,9 @@ jobs:
             ;;
           js)
             output=$(node script.js)
+            ;;
+          zig)
+            output=$(zig run hello.zig)
             ;;
         esac
 
