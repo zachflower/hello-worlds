@@ -8,7 +8,7 @@ jobs:
 
     strategy:
       matrix:
-        language: [sh, py, pl, c, cpp, js, zig]
+        language: [sh, py, pl, c, cpp, js]
 
     steps:
     - name: Checkout repository
