@@ -1,4 +1,4 @@
-This hello, world was done in JavaScript.
+This "hello, world" was done in JavaScript.
 
 The only dependency that JavaScript really needs to run on Visual Studio Code is Node.js.
 
