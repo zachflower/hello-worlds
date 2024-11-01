@@ -1,3 +1,5 @@
+This hell, world was done in JavaScript.
+
 The only dependency that JavaScript really needs to run on Visual Studio Code is Node.js.
 
 To compile JavaScript you must install Node.js which will allow you to run JavaScript on Visual Studio Code.
